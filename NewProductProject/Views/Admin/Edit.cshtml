@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>Edit Product</h3>
+
+<div class="container">
+
+    @{ Html.BeginForm();}
+
+    <div class="row">
+
+        <div class="col-lg-3">
+
+            @Html.Label("Enter Product Name")
+
+        </div>
+
+        <div class="col-lg-3">
+
+            @Html.TextBox("name",(string)ViewBag.Name)
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-3">
+
+            @Html.Label("Enter Product Price")
+
+        </div>
+
+        <div class="col-lg-3">
+
+            @Html.TextBox("price", (decimal)ViewBag.Price)
+
+            @Html.Hidden("id", (int)ViewBag.Id)
+
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-3">
+
+            @Html.Label(" Product Description")
+
+        </div>
+
+        <div class="col-lg-3">
+
+            @Html.TextBox("description",(string)ViewBag.Description)
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-3">
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <input type="submit" value="Update" class="btn btn-warning" />
+
+        </div>
+
+    </div>
+
+    @{Html.EndForm();}
+
+</div>
